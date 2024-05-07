@@ -1,0 +1,67 @@
+{
+    "art-pieces": [
+      {
+        "id": 1,
+        "name": "Flapper girl",
+        "image": "art/drawing.jpg",
+        "description": "Flappers were young, fast-moving, fast-talking, reckless and unfazed by previous social conventions or taboos as displayed.",
+        "size": " 38cm x 50cm",
+        "artist": "Corne Akkers"
+      },
+      {
+        "id": 2,
+        "name": "Untitled",
+        "image": "art/R-Siva-Rhythm-Art-Artist.jpg",
+        "description": "The artist uses bright colours to depict the vibrancy of our diverse Indian culture (Folk and Classical). Various dance and musical forms are regularly shown in his works.",
+        "size": "60cm x 60cm",
+        "artist": "R.Shiva"
+      },
+      {
+        "id": 3,
+        "name": "Starry night lakeview",
+        "image": "art/8_40.jpg",
+        "description": "This mid-scale, oil-on-canvas painting is dominated by a moon- and star-filled night sky",
+        "size": "38cm x 50cm",
+        "artist": "Karissa Bordin"
+      },
+      {
+        "id": 4,
+        "name": "Sunset on the bay",
+        "image": "art/landscape.jpeg",
+        "description": "The awesome beauty of the setting sun is also symbolic of the beauty and mystery of life itself. As the sun sets, light fades, which is symbolic of the forces of darkness.",
+        "size": "40cm by 60cm",
+        "artist": "Leonid Afremov"
+      },
+      {
+        "id": 5,
+        "name": "Kerala temples",
+        "image": "art/artezaar-com",
+        "description": "It express the love the artist has for Indian culture, Indian heritage, and Indian mural art",
+        "size": "30cm x 40cm",
+        "artist": "Kannankutty Kunnath"
+      },
+      {
+        "id": 6,
+        "name": "Internal struggle of lust",
+        "image": "art/LEA155.webp",
+        "description": " This is tango,which is a dance. In fact, the dancers hold everything under control, including feelings.",
+        "size": "24cm x 40cm",
+        "artist": "Leonid Afremov"
+      },
+      {
+        "id": 7,
+        "name": "Simply Whitney",
+        "image": "art/portrait-painting.jpg",
+        "description": "Whitney Elizabeth Houston was an American singer and actress.Houston influenced many singers in popular music .",
+        "size": "50cm x 40cm",
+        "artist": "Mac"
+      }, {
+        "id": 8,
+        "name": "No title",
+        "image": "art/Mikolaj.jpg",
+        "description": "Jackiewicz's work is psychedelic, but relies on patterns of geometry and art to base his imagery in the preexisting lines of art history.",
+        "size": "40.6cm x 50.8cm",
+        "artist": "Mikolaj Jackiewicz"
+      }
+    ]
+}
