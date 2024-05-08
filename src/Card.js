@@ -20,7 +20,7 @@ function ArtCard({ id, onDelete }) {
     return <div>Loading...</div>;
   }
 
-  const { name, description, author, image } = arts;
+  const { name, description, artist, image } = arts;
 
   return (
     <div className="art-card">
