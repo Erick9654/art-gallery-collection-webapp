@@ -30,7 +30,7 @@ function ArtCard({ id, onDelete }) {
       <div className="art-card-details">
         <h2>{name}</h2>
         <p>{description}</p>
-        <p>artist: {artist}</p>
+        <p>artist: {author}</p>
         <button onClick={handleDelete}>Delete</button>        
       </div>
     </div>

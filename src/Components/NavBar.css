@@ -1,0 +1,27 @@
+.nav-link{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    padding: 5px;
+    margin: 0 6px 6px;
+    background: gold;
+    text-decoration: none;
+    text-align: center;
+    font-size: min(10vw, 15px) ;
+    color: blue;
+}
+  
+.active {
+    color: blueviolet;
+}
+h2{
+    display:block ;
+    color: #333333;
+}
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #F5F5F5;
+  }
+  
