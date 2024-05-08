@@ -4,7 +4,7 @@ function ArtCard({ id, onDelete }) {
   const [arts, setArts] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/${id}`)
+    fetch(`http://localhost:3001/art-pieces${id}`)
       .then(response => response.json())
       .then(data => setArts(data))
       .catch(error => console.error('Error fetching arts:', error));
