@@ -2,7 +2,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    background-color: #e6f7ff; /* Light blue background color */
+    /* background-color: #e6f7ff; */
+     /* Light blue background color */
+     padding-top: 40px;
   }
   
   .art-card {
@@ -25,7 +27,7 @@
   
   .art-card-image img {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
@@ -38,21 +40,21 @@
   .art-card-details h2 {
     margin: 0 0 10px;
     color: #222;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
   
   .art-card-details p {
     margin: 0;
     color: #444;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   }
   
   .art-card-details button {
     background-color: #ff4081;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 30px 20px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;

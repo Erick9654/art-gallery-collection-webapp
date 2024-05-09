@@ -24,7 +24,7 @@ export const Searchbar = ({setResults}) => {
         fetchData(value)
     }
     return (
-        <div>
+        <div id="search-item">
             <input placeholder="Search here..." value={input} onChange={(e) =>
                  handleChange(e.target.value)}/>
         </div>
