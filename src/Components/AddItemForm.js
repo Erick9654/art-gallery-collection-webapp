@@ -1,90 +1,29 @@
 
-// import React, { useState } from 'react';
-// import { useForm } from 'react-hook-form';
-
-// function ArtForm() {
-//     const { register, handleSubmit, formState: { errors } } = useForm();
-//     const [imageUrl, setImageUrl] = useState('');
-//     const [file, setFile] = useState(null);
-
-//     const handleImageUpload = (e) => {
-//         const uploadedFile = e.target.files[0];
-//         setFile(uploadedFile);
-
-//         // Optional: You can also show a preview of the uploaded image
-//         const reader = new FileReader();
-//         reader.onload = () => {
-//             setImageUrl(reader.result);
-//         };
-//         reader.readAsDataURL(uploadedFile);
-//     };
-
-//     const onSubmit = (data) => {
-//         console.log(data); // Handle form data submission
-//         // Reset form fields if needed
-//         setImageUrl('');
-//         setFile(null);
-//     };
-
-//     return (
-    
-//         <form onSubmit={handleSubmit(onSubmit)}>
-            
-//             <div>
-//                 <label htmlFor="imageUrl">Image URL:</label>
-//                 <input
-//                     type="url"
-//                     id="imageUrl"
-//                     {...register("imageUrl", { required: true })}
-//                 />
-//                 {errors.imageUrl && <span>This field is required</span>}
-//             </div>
-//             <div>
-//                 <label htmlFor="uploadImage">Upload Image:</label>
-//                 <input
-//                     type="file"
-//                     id="uploadImage"
-//                     accept="image/*"
-//                     onChange={handleImageUpload}
-//                 />
-//                 {file && <img src={imageUrl} alt="Uploaded Artwork" style={{ maxWidth: '200px', marginTop: '10px' }} />}
-//             </div>
-//             <div>
-//                 <label htmlFor="description">Description:</label>
-//                 <textarea
-//                     id="description"
-//                     {...register("description")}
-//                 />
-//             </div>
-//             <div>
-//                 <label htmlFor="genre">Genre:</label>
-//                 <select id="genre" {...register("genre")}>
-//                     <option value="abstract">Abstract</option>
-//                     <option value="portrait">Portrait</option>
-//                     <option value="landscape">Landscape</option>
-//                     <option value="stillLife">Still Life</option>
-//                     {/* Add more genres as needed */}
-//                 </select>
-//             </div>
-//             <button type="submit">Submit</button>
-//         </form>
-//     );
-// }
-
-// export default ArtForm;
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import backgroundImage from "./purple-fluid-art-art-background-diy-abstract-flowing-texture.jpg"; // Replace 'background.jpg' with your actual background image file
+import axios from "axios";
+import backgroundImage from "./pexels-anniroenkae-2983141.jpg";
 
 function AddArtForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
+    reset,
   } = useForm();
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data); // Handle form data submission
+  const onSubmit = async (data) => {
+    try {
+      await axios.post(
+        "https://json-server-template-dej7.onrender.com/art-pieces",
+        data
+      );
+      setSubmitSuccess(true);
+      reset();
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -96,76 +35,132 @@ function AddArtForm() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
       }}
     >
       <form
         onSubmit={handleSubmit(onSubmit)}
         style={{
-          // backgroundColor: "rgba(255, 255, 255, 0.8)",
-          padding: "20px",
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
+          padding: "40px",
           borderRadius: "8px",
-          maxWidth: "400px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          maxWidth: "500px",
           width: "100%",
+          textAlign: "center",
         }}
       >
-        <div>
+        <h2
+          style={{
+            marginBottom: "20px",
+            fontFamily: "Arial, sans-serif",
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+            color: "#333",
+            textTransform: "uppercase",
+            letterSpacing: "2px",
+          }}
+        >
+          Add New Artwork
+        </h2>
+        <div style={{ marginBottom: "20px" }}>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
-            {...register("name", { required: true })}
+            {...register("name", { required: "Name is required" })}
+            style={{
+              padding: "8px",
+              boxSizing: "border-box",
+              borderRadius: "4px",
+              borderColor: errors.name ? "red" : "#ccc",
+            }}
           />
           {errors.name && (
-            <span style={{ color: "red" }}>Name is required</span>
+            <span style={{ color: "red", marginTop: "4px", display: "block" }}>
+              {errors.name.message}
+            </span>
           )}
         </div>
-        <div>
-          <label htmlFor="imageUrl">Image URL:</label>
-          <input
-            type="url"
-            id="imageUrl"
-            {...register("imageUrl", {
-              pattern: /^(https?:\/\/.*\.(?:png|jpg|jpeg))$/i,
-              required: true,
-            })}
-          />
-          {errors.imageUrl && (
-            <span style={{ color: "red" }}>Please enter a valid image URL</span>
-          )}
-        </div>
-        <div>
-          <p> Or</p>
-        </div>
-        <div>
-          <label htmlFor="uploadImage">Upload Image:</label>
-          <input
+               <div style={{ marginBottom: "20px" }}>
+         <label htmlFor="uploadImage">Upload Image:</label>
+         <input
             type="file"
             id="uploadImage"
-            accept="image/*"
-            {...register("uploadImage")}
+            accept=".jpg, .jpeg"
+            {...register("uploadImage", { required: "Please upload an image" })}
+            style={{
+              padding: "8px",
+              boxSizing: "border-box",
+              borderRadius: "4px",
+              borderColor: errors.uploadImage ? "red" : "#ccc",
+            }}
           />
+          {errors.uploadImage && (
+            <span style={{ color: "red", marginTop: "4px", display: "block" }}>
+              {errors.uploadImage.message}
+            </span>
+          )}
         </div>
-        <div>
+        <div style={{ marginBottom: "20px" }}>
           <label htmlFor="description">Description:</label>
           <textarea
             id="description"
-            {...register("description", { required: true })}
+            {...register("description", { required: "Description is required" })}
+            style={{
+              width: "100%",
+              padding: "8px",
+              boxSizing: "border-box",
+              borderRadius: "4px",
+              borderColor: errors.description ? "red" : "#ccc",
+            }}
           />
           {errors.description && (
-            <span style={{ color: "red" }}>Description is required</span>
+            <span style={{ color: "red", marginTop: "4px", display: "block" }}>
+              {errors.description.message}
+            </span>
           )}
         </div>
-        <div>
+        <div style={{ marginBottom: "20px" }}>
           <label htmlFor="genre">Genre:</label>
-          <select id="genre" {...register("genre")}>
+          <select
+            id="genre"
+            {...register("genre")}
+            style={{
+              width: "100%",
+              padding: "8px",
+              boxSizing: "border-box",
+              borderRadius: "4px",
+            }}
+          >
             <option value="abstract">Abstract</option>
             <option value="portrait">Portrait</option>
             <option value="landscape">Landscape</option>
             <option value="stillLife">Still Life</option>
-          
           </select>
         </div>
-        <button type="submit">Submit</button>
+
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          style={{
+            width: "100%",
+            padding: "10px",
+            borderRadius: "4px",
+            backgroundColor: "#4CAF50",
+            color: "white",
+            border: "none",
+            cursor: isSubmitting ? "not-allowed" : "pointer",
+          }}
+        >
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </button>
+        {submitSuccess && (
+          <div style={{ color: "green", marginTop: "10px" }}>
+            Submission successful!
+          </div>
+        )}
       </form>
     </div>
   );
