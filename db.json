@@ -30,7 +30,7 @@
       {
         "id": 4,
         "name": "Sunset on the bay",
-        "image": "art/landscape.jpeg",
+        "image": "art/landscape.jpg",
         "description": "The awesome beauty of the setting sun is also symbolic of the beauty and mystery of life itself. As the sun sets, light fades, which is symbolic of the forces of darkness.",
         "size": "40cm by 60cm",
         "artist": "Leonid Afremov",
@@ -39,7 +39,7 @@
       {
         "id": 5,
         "name": "Kerala temples",
-        "image": "art/artezaar-com",
+        "image": "art/artezaar-com.jpg",
         "description": "It express the love the artist has for Indian culture, Indian heritage, and Indian mural art",
         "size": "30cm x 40cm",
         "artist": "Kannankutty Kunnath",
@@ -62,7 +62,8 @@
         "size": "50cm x 40cm",
         "artist": "Mac",
         "link": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQYj4PSH2qedsK2RGGzCy8lAOwUPAewHcIdmrwua4sisaFm_DlX"
-      }, {
+      },
+      {
         "id": 8,
         "name": "No title",
         "image": "art/Mikolaj.jpg",
