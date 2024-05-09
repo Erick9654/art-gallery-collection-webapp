@@ -8,10 +8,10 @@ export default function NavBar() {
         <h2>Art Gallery </h2>
         <nav>
           <NavLink to="/" className="nav-link">Home </NavLink>
-          <NavLink to="/addart" className="nav-link">AddArt </NavLink>
+          <NavLink to="/additemform" className="nav-link">AddArt </NavLink>
           <NavLink to="/about" className="nav-link">About </NavLink>
           <NavLink to="/login" className="nav-link"> Login</NavLink>
-
+      
         </nav>
     </div>
   )
