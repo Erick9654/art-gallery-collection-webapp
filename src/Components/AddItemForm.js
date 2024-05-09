@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import backgroundImage from "./pexels-anniroenkae-2983141.jpg";
 
-function AddArtForm() {
+function AddItemForm() {
   const {
     register,
     handleSubmit,
@@ -166,4 +166,4 @@ function AddArtForm() {
   );
 }
 
-export default AddArtForm;
+export default AddItemForm;

@@ -6,7 +6,8 @@
         "image": "art/drawing.jpg",
         "description": "Flappers were young, fast-moving, fast-talking, reckless and unfazed by previous social conventions or taboos as displayed.",
         "size": " 38cm x 50cm",
-        "artist": "Corne Akkers"
+        "artist": "Corne Akkers",
+        "link": "https://www.sonicrendezvous.com/images/prod/I00/558/00558487.jpg"
       },
       {
         "id": 2,
@@ -14,7 +15,8 @@
         "image": "art/R-Siva-Rhythm-Art-Artist.jpg",
         "description": "The artist uses bright colours to depict the vibrancy of our diverse Indian culture (Folk and Classical). Various dance and musical forms are regularly shown in his works.",
         "size": "60cm x 60cm",
-        "artist": "R.Shiva"
+        "artist": "R.Shiva",
+        "link": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTfCVNmq6ZLVLBwApRWmmzyNWGSzW_x_F9O-Bu8nHsecAmDsw6W"
       },
       {
         "id": 3,
@@ -22,23 +24,26 @@
         "image": "art/8_40.jpg",
         "description": "This mid-scale, oil-on-canvas painting is dominated by a moon- and star-filled night sky",
         "size": "38cm x 50cm",
-        "artist": "Karissa Bordin"
+        "artist": "Karissa Bordin",
+        "link": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSE3ufM5gjAPWJYSbKZmMJA844KjJdvSSuhjJYI8Z3AtdyZE4g0"
       },
       {
         "id": 4,
         "name": "Sunset on the bay",
-        "image": "art/landscape.jpeg",
+        "image": "art/landscape.jpg",
         "description": "The awesome beauty of the setting sun is also symbolic of the beauty and mystery of life itself. As the sun sets, light fades, which is symbolic of the forces of darkness.",
         "size": "40cm by 60cm",
-        "artist": "Leonid Afremov"
+        "artist": "Leonid Afremov",
+        "link": "https://cdna.artstation.com/p/assets/images/images/039/758/058/large/leonid-afremov-punta-allen-tulum-mexico-oil-painting-on-canvas.jpg?1626853967"
       },
       {
         "id": 5,
         "name": "Kerala temples",
-        "image": "art/artezaar-com",
+        "image": "art/artezaar-com.jpg",
         "description": "It express the love the artist has for Indian culture, Indian heritage, and Indian mural art",
         "size": "30cm x 40cm",
-        "artist": "Kannankutty Kunnath"
+        "artist": "Kannankutty Kunnath",
+        "link": "https://artezaar.com/cdn/shop/products/artezaar-com-online-art-gallery-kerala-murals-acrylic-painting-artezaar-com-1_1800x1800.jpg?v=1666023292"
       },
       {
         "id": 6,
@@ -46,7 +51,8 @@
         "image": "art/LEA155.webp",
         "description": " This is tango,which is a dance. In fact, the dancers hold everything under control, including feelings.",
         "size": "24cm x 40cm",
-        "artist": "Leonid Afremov"
+        "artist": "Leonid Afremov",
+        "link": "https://afremov.com/media/catalog/product/cache/029c9410eb6b6a309d2f6c6bdfc6e2f2/image_737.jpeg"
       },
       {
         "id": 7,
@@ -54,14 +60,17 @@
         "image": "art/portrait-painting.jpg",
         "description": "Whitney Elizabeth Houston was an American singer and actress.Houston influenced many singers in popular music .",
         "size": "50cm x 40cm",
-        "artist": "Mac"
-      }, {
+        "artist": "Mac",
+        "link": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQYj4PSH2qedsK2RGGzCy8lAOwUPAewHcIdmrwua4sisaFm_DlX"
+      },
+      {
         "id": 8,
         "name": "No title",
         "image": "art/Mikolaj.jpg",
         "description": "Jackiewicz's work is psychedelic, but relies on patterns of geometry and art to base his imagery in the preexisting lines of art history.",
         "size": "40.6cm x 50.8cm",
-        "artist": "Mikolaj Jackiewicz"
+        "artist": "Mikolaj Jackiewicz",
+        "link": "https://artpower.pl/_next/image?url=https%3A%2F%2Fartpower-prod.ams3.cdn.digitaloceanspaces.com%2Fpictures%2F6475.jpg&w=640&q=60"
       }
     ]
 }

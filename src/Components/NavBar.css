@@ -1,0 +1,43 @@
+.nav-link{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    padding: 5px;
+    margin: 0 6px 6px;
+    /* background: ; */
+    text-decoration: none;
+    text-align: center;
+    font-size: min(10vw, 15px) ;
+    color: rgb(34, 119, 161);
+}
+  
+.active {
+    color: rgb(214, 226, 43);
+}
+h2{
+    display:block ;
+    color: #f9f8f8;
+}
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #061643;
+}
+#about img{
+    padding-top: 30px;
+}
+#about p{
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: antiquewhite;
+}
+#about h3{
+    color: antiquewhite;
+    
+}
+#about{
+    text-align: center;
+    padding-top: 50px;
+}
