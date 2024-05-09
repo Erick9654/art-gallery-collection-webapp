@@ -32,7 +32,7 @@ function ArtCard({ onDelete }) {
       {arts.map(art => (
         <div key={art.id} className="art-card">
           <div className="art-card-image">
-            <img src={art.jpg} alt={art.name} />
+            <img src={art.link} alt={art.name} />
           </div>
           <div className="art-card-details">
             <h2>{art.name}</h2>
