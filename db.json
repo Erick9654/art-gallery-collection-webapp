@@ -62,6 +62,42 @@
         "description": "Jackiewicz's work is psychedelic, but relies on patterns of geometry and art to base his imagery in the preexisting lines of art history.",
         "size": "40.6cm x 50.8cm",
         "artist": "Mikolaj Jackiewicz"
+      },
+      {
+        "id": 9,
+        "name": "Dance",
+        "image": "art/the-dance-1.jpg",
+        "description": "Simple and direct, the painting speaks volumes about our deep-rooted, primal human desire for connection, movement, rhythm and music.",
+        "size": " 60cm x 80cm",
+        "artist": "Henri Matisse",
+        "link": "https://www.weloveart.com/wp-content/uploads/2020/04/the-dance-1.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Girl with a Pearl Earring",
+        "image": "art/pearl.webp",
+        "description": "It portrays her looking over her shoulder, locking her eyes with the viewer as if attempting to establish an intimate connection across the centuries. ",
+        "size": " 44.5cm x 39cm",
+        "artist": "Johannes Vermeer",
+        "link": "https://media.timeout.com/images/103166735/1024/768/image.webp"
+      },
+      {
+        "id": 11,
+        "name": "The Harvesters",
+        "image": "art/harvesters.webp",
+        "description": "A group of peasants on the left cut and bundle ripened wheat, while the on the right, another group takes their midday meal.",
+        "size": "119 cm x 162 cm",
+        "artist": "Pieter Bruegel the Elder",
+        "link": "https://media.timeout.com/images/105222673/1024/768/image.webp"
+      },
+      {
+        "id": 12,
+        "name": "Liberty Leading the People",
+        "image": "art/liberty.jpg",
+        "description": "Combining allegory with contemporary elements, the painting is a thrilling example of the Romantic style, as members of different classes unite behind her to storm a barricade strewn with the bodies of fallen comrades",
+        "size": "260cm x 325cm",
+        "artist": "Eugène Delacroix",
+        "link": "https://media.timeout.com/images/105222682/1024/768/image.webp"
       }
     ]
 }
