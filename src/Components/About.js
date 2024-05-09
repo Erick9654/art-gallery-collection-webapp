@@ -12,9 +12,10 @@ export default function About() {
           <img src='https://images.pexels.com/photos/1671014/pexels-photo-1671014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Art-Gallery' style={{ width: '50%', height: '600px' }}/>
           <div>
               <h3>Description</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>At Art Gallery, our mission is to celebrate and promote the diverse world of art by providing a platform for artists to showcase their work and for art enthusiasts to discover and engage with exceptional artwork.</p>
+              <h3>OVERVIEW</h3>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Art Gallery is an online art gallery dedicated to connecting artists and art lovers from around the globe. Our platform features a curated collection of contemporary artwork spanning various genres, styles, and mediums.
               </p>
           </div>
 
