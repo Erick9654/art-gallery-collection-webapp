@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import backgroundImage from "./pexels-anniroenkae-2983141.jpg";
+import NavBar from "./NavBar";
 
 function AddItemForm() {
   const {
@@ -27,7 +27,11 @@ function AddItemForm() {
   };
 
   return (
-    <div
+    <>
+    <header>
+          <NavBar/>
+      </header>
+    <div id="addart"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -36,6 +40,7 @@ function AddItemForm() {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "rgba(255, 255, 255, 0.9)",
+        paddingTop: "80px"
       }}
     >
       <form
@@ -85,7 +90,7 @@ function AddItemForm() {
                <div style={{ marginBottom: "20px" }}>
          <label htmlFor="uploadImage">Upload Image:</label>
          <input
-            type="file"
+            type="url"
             id="uploadImage"
             accept=".jpg, .jpeg"
             {...register("uploadImage", { required: "Please upload an image" })}
@@ -101,6 +106,14 @@ function AddItemForm() {
               {errors.uploadImage.message}
             </span>
           )}
+        </div>
+        <div>
+          <label htmlFor="artist">Artist:</label>
+          <input type="text" id="artist" 
+          {...register("artist", { required: "Artist is required" })}
+          style={{
+              padding: "8px",
+              boxSizing: "border-box"}}/>
         </div>
         <div style={{ marginBottom: "20px" }}>
           <label htmlFor="description">Description:</label>
@@ -163,6 +176,7 @@ function AddItemForm() {
         )}
       </form>
     </div>
+    </>
   );
 }
 

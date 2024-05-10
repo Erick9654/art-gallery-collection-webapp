@@ -38,13 +38,31 @@
 }
 body{
   background-color: #5c0431;
+  margin: 0;
+  padding: 0;
 }
 .login-wrapper{
   text-align: center;
   color: antiquewhite;
+  padding-top: 70px;
+}
+.login-wrapper input{
+  width: 350px;
+  padding: 6px;
+}
+#login{
+  padding-top: 30px;
+}
+#login button{
+  padding: 10px 14px;
+  /* background-color: #0a0a0a; */
+  /* border-radius: 8px;
+  cursor: pointer; */
+  /* border-color: none; */
+  /* color: antiquewhite; */
 }
 #search-item{
-  padding-top: 20px;
+  padding-top: 100px;
 }
 #search-item input{
   width: 350px;
@@ -54,5 +72,7 @@ body{
   color: antiquewhite;
   position: relative;
   padding-top: 40px;
-  
+}
+#addart label{
+  display: block;
 }

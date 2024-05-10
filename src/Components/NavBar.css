@@ -23,9 +23,11 @@ h2{
     justify-content: space-between; 
     align-items: center; 
     background-color: #061643;
+    position: fixed;
+    width: 100%;
 }
 #about img{
-    padding-top: 30px;
+    padding-top: 0px;
 }
 #about p{
     text-align: center;
@@ -40,4 +42,7 @@ h2{
 #about{
     text-align: center;
     padding-top: 50px;
+}
+#content{
+    padding-top: 80px;
 }
