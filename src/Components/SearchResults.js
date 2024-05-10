@@ -2,12 +2,15 @@ import React from "react";
 
 export const SearchResults = ({results}) => {
     return (
-        <div>
-         <img src={results.link}/>
-         <div>{results.name}</div> 
-         <div>By</div>
-         <div>{results.artist}</div>
-        
+        <div className="art-card-container">
+            <div className="art-card-image">
+              <img src={results.link}/>
+            </div>
+            <div className="card-details">
+              <div>{results.name}</div> 
+              <div>By</div>
+              <h4>{results.artist}</h4>
+            </div>
         </div>
     )
 }
