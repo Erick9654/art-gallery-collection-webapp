@@ -45,5 +45,8 @@ body{
 }
 #search-item{
   padding-top: 20px;
-  
+}
+#search-item input{
+  width: 350px;
+  padding: 8px;
 }
