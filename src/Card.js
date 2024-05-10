@@ -19,6 +19,7 @@ function ArtCard({ onDelete }) {
       if (!response.ok) {
         throw new Error('Failed to delete art piece');
       }
+      setArts(arts.filter(art => art.id !==id));
       onDelete(id);
     })
     .catch(error => {
