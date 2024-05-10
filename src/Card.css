@@ -11,7 +11,7 @@
     border: 2px solid #ddd;
     border-radius: 16px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #ccd5e0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s, transform 0.3s;
   }
@@ -51,13 +51,14 @@
   }
   
   .art-card-details button {
-    background-color: #ff4081;
+    background-color: #e12563;
     color: #fff;
     border: none;
-    padding: 14px 20px;
+    padding: 12px 14px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    
   }
   
   .art-card-details button:hover {
