@@ -12,7 +12,18 @@ async function loginUser(credentials) {
  })
    .then(data => data.json())
 }
-
+// const res = fetch(
+//   'https://art-gallery-collection-webapp-default-rtdb.firebaseio.com/db.json',
+  
+// )
+// if(res)
+//   {
+//     alert("Message sent")
+//   }
+// else
+// {
+//   alert("Error Occured")
+// }
 function Login({ setToken }) {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
