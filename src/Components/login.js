@@ -1,71 +1,56 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import NavBar from './NavBar';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-async function loginUser(credentials) {
- return fetch('http://localhost:8080/login', {
-   method: 'POST',
-   headers: {
-     'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json())
-}
-// const res = fetch(
-//   'https://art-gallery-collection-webapp-default-rtdb.firebaseio.com/db.json',
+function LoginPage() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('')
+  const navigate = useNavigate(); // Utilize useNavigate hook
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+
+    // Simulate authentication (replace with actual login logic)
   
-// )
-// if(res)
-//   {
-//     alert("Message sent")
-//   }
-// else
-// {
-//   alert("Error Occured")
-// }
-function Login({ setToken }) {
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+    const isAuthenticated = username === 'admin' && password === 'password123';
 
-  const handleSubmit = async e => {
-    e.preventDefault();
-    const token = await loginUser({
-      username,
-      password
-    });
-    setToken(token);
-  }
+    setIsLoggedIn(isAuthenticated);
+    setUsername(username);
+    setPassword(password)
+  };
 
-  return(
-    <>
-    <header>
-        <NavBar/>
-    </header>
-    <body>
-        <div className="login-wrapper">
-          <h1>Please Log In</h1>
-          <form onSubmit={handleSubmit}>
-            <label>
-              <p>Username</p>
-              <input type="text" onChange={e => setUserName(e.target.value)} />
-            </label>
-            <label>
-              <p>Password</p>
-              <input type="password" onChange={e => setPassword(e.target.value)} />
-            </label>
-            <div id='login'>
-              <button type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
-      </body>
-    </>
-  )
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setUsername('');
+    setPassword('');
+  };
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate('/'); // Redirect to home page on login
+    }
+  }, [isLoggedIn, navigate]); // Include navigate in dependency array
+
+  return (
+    <div>
+      {/* ... other content ... */}
+      {isLoggedIn ? (
+        <button onClick={handleLogout}>Logout</button>
+      ) : (
+        <form onSubmit={handleLogin}>
+          <label>
+            Username:
+            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+          </label>
+          <label>
+            Password:
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+          </label>
+          <button type="submit">Login</button>
+        </form>
+      )}
+    </div>
+  );
 }
 
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired
-};
-
-export default Login;
+export default LoginPage;
