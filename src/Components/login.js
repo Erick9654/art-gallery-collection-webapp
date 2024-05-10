@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css'
+import NavBar from "./NavBar";
 
 function LoginPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,6 +35,10 @@ function LoginPage() {
   }, [isLoggedIn, navigate]);
 
   return (
+    <>
+    <header>
+          <NavBar/>
+      </header>
     <div className='login-container'>
       {isLoggedIn ? (
         <button onClick={handleLogout}>Logout</button>
@@ -51,6 +56,7 @@ function LoginPage() {
         </form>
       )}
     </div>
+    </>
   );
 }
 

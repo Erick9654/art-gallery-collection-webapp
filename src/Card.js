@@ -75,7 +75,7 @@ function ArtCard({ onDelete }) {
                 onChange={(e) => setNewDescription(e.target.value)}
               />
               <button onClick={() => handleUpdateDescription(art.id, newDescription)}>
-                Update Description
+                Update 
               </button>
             </div>
             <button onClick={() => handleDelete(art.id)}>Delete</button>

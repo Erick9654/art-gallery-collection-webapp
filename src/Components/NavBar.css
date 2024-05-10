@@ -28,6 +28,7 @@ h2{
 }
 #about img{
     padding-top: 0px;
+    height: 100%;
 }
 #about p{
     text-align: center;
