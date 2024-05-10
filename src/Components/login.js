@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
+import './login.css'
 
 function LoginPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('')
-  const navigate = useNavigate(); // Utilize useNavigate hook
+  const navigate = useNavigate(); 
 
   const handleLogin = (event) => {
     event.preventDefault();
 
-    // Simulate authentication (replace with actual login logic)
   
     const isAuthenticated = username === 'admin' && password === 'password123';
-
+    if(username==='admin' && password==='password123') {
     setIsLoggedIn(isAuthenticated);
     setUsername(username);
-    setPassword(password)
+    setPassword(password)}
+    else { alert('wrong password or username')}
   };
+
 
   const handleLogout = () => {
     setIsLoggedIn(false);
@@ -27,13 +29,12 @@ function LoginPage() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate('/'); // Redirect to home page on login
+      navigate('/'); 
     }
-  }, [isLoggedIn, navigate]); // Include navigate in dependency array
+  }, [isLoggedIn, navigate]);
 
   return (
-    <div>
-      {/* ... other content ... */}
+    <div className='login-container'>
       {isLoggedIn ? (
         <button onClick={handleLogout}>Logout</button>
       ) : (
